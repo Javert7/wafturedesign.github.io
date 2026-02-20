@@ -1,13 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-  <title>Wafture Design</title>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javert Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    background:#0f0f0f;
+    color:white;
+}
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+h1{
+    font-size:60px;
+    font-weight:600;
+}
+p{
+    margin-top:20px;
+    font-size:18px;
+    opacity:0.7;
+}
+button{
+    margin-top:40px;
+    padding:12px 30px;
+    background:white;
+    color:black;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background:#999;
+}
+section{
+    padding:100px 10%;
+}
+.card{
+    background:#1a1a1a;
+    padding:30px;
+    margin-bottom:30px;
+    border-radius:10px;
+}
+</style>
 </head>
-<body style="background:black; color:white; text-align:center; font-family:Arial;">
+<body>
 
-  <h1>WAFTURE DESIGN</h1>
-  <p>Creative Portfolio</p>
+<header>
+    <h1>JAVERT</h1>
+    <p>Creative Designer & Developer</p>
+    <button onclick="document.getElementById('work').scrollIntoView()">My Work</button>
+</header>
+
+<section id="work">
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>Project One</h3>
+        <p>Modern website design.</p>
+    </div>
+    <div class="card">
+        <h3>Project Two</h3>
+        <p>Brand identity design.</p>
+    </div>
+</section>
 
 </body>
 </html>
