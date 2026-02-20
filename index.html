@@ -3,19 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Javert Design</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<title>Javert</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins', sans-serif;
 }
+
 body{
     background:#0f0f0f;
     color:white;
+    overflow-x:hidden;
 }
+
 header{
     height:100vh;
     display:flex;
@@ -23,37 +27,63 @@ header{
     justify-content:center;
     align-items:center;
     text-align:center;
+    background: radial-gradient(circle at 30% 40%, #ff00cc33, transparent 40%),
+                radial-gradient(circle at 70% 60%, #00ffee33, transparent 40%),
+                #0f0f0f;
 }
+
 h1{
-    font-size:60px;
-    font-weight:600;
+    font-size:80px;
+    font-weight:800;
+    letter-spacing:5px;
+    background: linear-gradient(90deg,#ff00cc,#00ffee);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
+
 p{
     margin-top:20px;
     font-size:18px;
     opacity:0.7;
 }
+
 button{
     margin-top:40px;
-    padding:12px 30px;
-    background:white;
-    color:black;
-    border:none;
+    padding:14px 35px;
+    background:transparent;
+    border:1px solid white;
+    color:white;
     cursor:pointer;
     transition:0.3s;
 }
+
 button:hover{
-    background:#999;
+    background:white;
+    color:black;
 }
+
 section{
     padding:100px 10%;
 }
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
 .card{
     background:#1a1a1a;
     padding:30px;
-    margin-bottom:30px;
-    border-radius:10px;
+    border-radius:15px;
+    transition:0.3s;
 }
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px #ff00cc33;
+}
+
 </style>
 </head>
 <body>
@@ -61,18 +91,20 @@ section{
 <header>
     <h1>JAVERT</h1>
     <p>Creative Designer & Developer</p>
-    <button onclick="document.getElementById('work').scrollIntoView()">My Work</button>
+    <button onclick="document.getElementById('work').scrollIntoView()">View My Work</button>
 </header>
 
 <section id="work">
-    <h2>Projects</h2>
-    <div class="card">
-        <h3>Project One</h3>
-        <p>Modern website design.</p>
-    </div>
-    <div class="card">
-        <h3>Project Two</h3>
-        <p>Brand identity design.</p>
+    <h2 style="margin-bottom:40px;">Selected Work</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Website Design</h3>
+            <p>Modern UI/UX experience.</p>
+        </div>
+        <div class="card">
+            <h3>Brand Identity</h3>
+            <p>Premium branding concept.</p>
+        </div>
     </div>
 </section>
 
