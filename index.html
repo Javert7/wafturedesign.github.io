@@ -145,7 +145,7 @@ footer{
 </header>
 
 <!-- VIDEO SECTION -->
-<section id="video">
+<section id="video" class="reveal">
     <div class="section-title">Featured Video</div>
     <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
@@ -154,7 +154,7 @@ footer{
 </section>
 
 <!-- PHOTO SECTION -->
-<section>
+<<section class="reveal">>
     <div class="section-title">Selected Works</div>
     <div class="projects">
 
@@ -179,6 +179,22 @@ footer{
 <footer>
 © 2026 Javert
 </footer>
+<script>
+function revealOnScroll(){
+    const reveals = document.querySelectorAll(".reveal");
 
+    reveals.forEach(el=>{
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if(elementTop < windowHeight - revealPoint){
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
 </body>
 </html>
